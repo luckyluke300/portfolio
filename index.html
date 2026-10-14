@@ -25,11 +25,9 @@
       <!-- Top Action Links -->
       <div class="mt-6 flex flex-wrap gap-4 text-sm font-medium">
         <a href="#offers" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white transition">View Fixed Packages</a>
-        <!-- Discord Community Link (Replace # with your Discord server invite) -->
         <a href="https://discord.gg/YOUR_INVITE_CODE" target="_blank" class="px-5 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white transition flex items-center gap-2">
           <span>Join Outreach Discord</span> ↗
         </a>
-        <!-- X Link -->
         <a href="https://x.com/YOUR_HANDLE" target="_blank" class="px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition">
           DM on X
         </a>
@@ -78,7 +76,7 @@
             <p class="text-xs text-slate-400 leading-relaxed mb-4">Fix wallet connection drops, broken layouts on iPhone/Android, and popup bugs.</p>
           </div>
           <div>
-            <div class="text-lg font-bold text-white mb-1">$50 <span class="text-xs text-slate-500 font-normal">USDC</span></div>
+            <div class="text-lg font-bold text-white mb-1">$80 <span class="text-xs text-slate-500 font-normal">USDC</span></div>
             <div class="flex items-center justify-between text-xs">
               <span class="text-emerald-400">⚡ 24h Turnaround</span>
               <span class="text-blue-400 group-hover:underline">View Details →</span>
@@ -95,7 +93,7 @@
             <p class="text-xs text-slate-400 leading-relaxed mb-4">Ready-to-use page connecting your smart contract to user wallets with clean status alerts.</p>
           </div>
           <div>
-            <div class="text-lg font-bold text-white mb-1">$100 <span class="text-xs text-slate-500 font-normal">USDC</span></div>
+            <div class="text-lg font-bold text-white mb-1">$180 <span class="text-xs text-slate-500 font-normal">USDC</span></div>
             <div class="flex items-center justify-between text-xs">
               <span class="text-emerald-400">⚡ 48h Turnaround</span>
               <span class="text-blue-400 group-hover:underline">View Details →</span>
@@ -111,7 +109,7 @@
             <p class="text-xs text-slate-400 leading-relaxed mb-4">Real-time alerts sent to your community channel whenever tokens are minted, bought, or transferred.</p>
           </div>
           <div>
-            <div class="text-lg font-bold text-white mb-1">$120 <span class="text-xs text-slate-500 font-normal">USDC</span></div>
+            <div class="text-lg font-bold text-white mb-1">$250 <span class="text-xs text-slate-500 font-normal">USDC</span></div>
             <div class="flex items-center justify-between text-xs">
               <span class="text-emerald-400">⚡ 48h Turnaround</span>
               <span class="text-blue-400 group-hover:underline">View Details →</span>
@@ -124,8 +122,6 @@
 
     <!-- Outreach Team Contacts & Footer -->
     <footer class="border-t border-slate-900 pt-8 space-y-6">
-      
-      <!-- Outreacher Directory (Easily plug in your team handles) -->
       <div>
         <h3 class="text-xs uppercase tracking-wider font-semibold text-slate-400 mb-3">Community & Outreach Contacts</h3>
         <p class="text-xs text-slate-500 mb-3">If you are working with our outreach members, contact them directly or verify on Discord:</p>
@@ -158,7 +154,7 @@
     <div class="bg-slate-900 border border-slate-800 rounded-xl max-w-lg w-full p-6 relative">
       <button onclick="closeModal('modal-mobile')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">✕</button>
       <div class="text-xs font-semibold text-blue-400 uppercase mb-1">Package Breakdown</div>
-      <h3 class="text-xl font-bold text-white mb-2">Mobile & Wallet Fix — $50 USDC</h3>
+      <h3 class="text-xl font-bold text-white mb-2">Mobile & Wallet Fix — $80 USDC</h3>
       <p class="text-sm text-slate-300 mb-4 leading-relaxed">
         Designed for founders whose site breaks on mobile browsers or where users keep getting stuck trying to connect their wallet.
       </p>
@@ -184,7 +180,7 @@
     <div class="bg-slate-900 border border-slate-800 rounded-xl max-w-lg w-full p-6 relative">
       <button onclick="closeModal('modal-claim')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">✕</button>
       <div class="text-xs font-semibold text-blue-400 uppercase mb-1">Package Breakdown</div>
-      <h3 class="text-xl font-bold text-white mb-2">Mint / Claim Flow — $100 USDC</h3>
+      <h3 class="text-xl font-bold text-white mb-2">Mint / Claim Flow — $180 USDC</h3>
       <p class="text-sm text-slate-300 mb-4 leading-relaxed">
         A complete, reliable frontend page allowing your users to connect their wallet, view token/NFT eligibility, and trigger your smart contract's mint or claim function.
       </p>
@@ -211,7 +207,7 @@
     <div class="bg-slate-900 border border-slate-800 rounded-xl max-w-lg w-full p-6 relative">
       <button onclick="closeModal('modal-bot')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">✕</button>
       <div class="text-xs font-semibold text-blue-400 uppercase mb-1">Package Breakdown</div>
-      <h3 class="text-xl font-bold text-white mb-2">Discord / Telegram Notifier Bot — $120 USDC</h3>
+      <h3 class="text-xl font-bold text-white mb-2">Discord / Telegram Notifier Bot — $250 USDC</h3>
       <p class="text-sm text-slate-300 mb-4 leading-relaxed">
         Keep your community hyped and informed by broadcasting live contract activity straight into your announcements or community chat.
       </p>
@@ -240,7 +236,6 @@
     function closeModal(id) {
       document.getElementById(id).classList.add('hidden');
     }
-    // Close modal on Escape key
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         document.querySelectorAll('[id^="modal-"]').forEach(modal => modal.classList.add('hidden'));
