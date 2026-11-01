@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Portfolio | EVM & Frontend Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    code, .mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-[#0B0F17] text-slate-200 min-h-screen antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- Header / Nav -->
+  <header class="max-w-4xl mx-auto px-6 py-8 flex justify-between items-center border-b border-slate-800/80">
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span class="mono text-xs text-slate-400 tracking-wider uppercase">Available for Sprint Contracts</span>
+    </div>
+    <div class="flex gap-4 mono text-xs text-slate-400">
+      <a href="https://github.com/YOUR_GITHUB" target="_blank" class="hover:text-blue-400 transition-colors">GitHub ↗</a>
+      <a href="https://x.com/YOUR_HANDLE" target="_blank" class="hover:text-blue-400 transition-colors">X ↗</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="max-w-4xl mx-auto px-6 pt-12 pb-20 space-y-16">
+    <section class="space-y-4">
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+        EVM Frontend & Web3 Full-Stack Developer
+      </h1>
+      <p class="text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+        I build production-grade web3 frontends, friction-free wallet UX, and cryptographically secure signed-settlement backends on <span class="text-blue-400 font-medium">Base</span> and Ethereum.
+      </p>
+      <div class="pt-2 flex flex-wrap gap-2 mono text-xs">
+        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded">Base Mainnet</span>
+        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded">EIP-712 Signatures</span>
+        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded">Wagmi / Viem</span>
+        <span class="bg-slate-900 border border-slate-800 text-slate-300 px-2.5 py-1 rounded">Cloudflare Workers</span>
+      </div>
+    </section>
+
+    <!-- Flagship Proof Case Study -->
+    <section class="space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <h2 class="mono text-xs uppercase tracking-wider text-slate-400 font-semibold">Flagship Production Proof</h2>
+        <span class="mono text-xs text-emerald-400 bg-emerald-950/60 border border-emerald-800/40 px-2 py-0.5 rounded">Live on Base Mainnet</span>
+      </div>
+
+      <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-6 sm:p-8 space-y-6 hover:border-slate-700 transition-colors">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+          <div>
+            <h3 class="text-xl font-bold text-white">TapStar Space</h3>
+            <p class="text-slate-400 text-sm mt-1">Real-money onchain PvP game with low-latency offchain settlement.</p>
+          </div>
+          <div class="flex gap-3 mono text-xs shrink-0">
+            <a href="https://tapstar.space" target="_blank" class="text-blue-400 hover:underline">Live App ↗</a>
+            <a href="https://basescan.org/address/YOUR_CONTRACT_ADDRESS" target="_blank" class="text-blue-400 hover:underline">Basescan ↗</a>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-4 pt-2">
+          <div class="bg-slate-950/60 p-4 rounded-lg border border-slate-800/60">
+            <div class="mono text-xs text-slate-400">Contract Architecture</div>
+            <div class="text-sm font-semibold text-slate-200 mt-1">Escrow & Signed Settlement</div>
+            <p class="text-xs text-slate-500 mt-1">Non-custodial escrow holding stakes until authorized claim execution.</p>
+          </div>
+          <div class="bg-slate-950/60 p-4 rounded-lg border border-slate-800/60">
+            <div class="mono text-xs text-slate-400">Cryptographic Proof</div>
+            <div class="text-sm font-semibold text-slate-200 mt-1">EIP-712 Verification</div>
+            <p class="text-xs text-slate-500 mt-1">Prevents front-running and gas drains by verifying offchain operator signatures.</p>
+          </div>
+          <div class="bg-slate-950/60 p-4 rounded-lg border border-slate-800/60">
+            <div class="mono text-xs text-slate-400">Edge Backend</div>
+            <div class="text-sm font-semibold text-slate-200 mt-1">Cloudflare Workers</div>
+            <p class="text-xs text-slate-500 mt-1">Zero-cold-start backend managing room state and transaction validation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fixed-Price Quick Sprints -->
+    <section class="space-y-6">
+      <div class="border-b border-slate-800 pb-3">
+        <h2 class="mono text-xs uppercase tracking-wider text-slate-400 font-semibold">Fixed-Scope Sprint Services</h2>
+        <p class="text-xs text-slate-500 mt-1">Turnaround in 24–72 hours. Invoiced in USDC on Base.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-4">
+        <!-- Package 1 -->
+        <div class="bg-slate-900/40 border border-slate-800 rounded-lg p-5 flex flex-col justify-between hover:border-slate-700 transition">
+          <div class="space-y-3">
+            <div class="text-white font-semibold text-base">Mobile & Wallet UX Audit + Fix</div>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Fix broken mobile modal views, wallet connect drops (Rainbow/MetaMask/Coinbase Wallet), and silent transaction rejections.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-800/60 mt-4 flex items-baseline justify-between mono">
+            <span class="text-xs text-slate-500">Fixed Fee</span>
+            <span class="text-sm font-bold text-white">$100 USDC</span>
+          </div>
+        </div>
+
+        <!-- Package 2 -->
+        <div class="bg-slate-900/40 border border-slate-800 rounded-lg p-5 flex flex-col justify-between hover:border-slate-700 transition">
+          <div class="space-y-3">
+            <div class="text-white font-semibold text-base">Mint / Claim Flow Integration</div>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Connect your verified contract to a responsive frontend with real-time gas estimation, allowance checking, and error handling.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-800/60 mt-4 flex items-baseline justify-between mono">
+            <span class="text-xs text-slate-500">Fixed Fee</span>
+            <span class="text-sm font-bold text-white">$250 USDC</span>
+          </div>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="bg-slate-900/40 border border-slate-800 rounded-lg p-5 flex flex-col justify-between hover:border-slate-700 transition">
+          <div class="space-y-3">
+            <div class="text-white font-semibold text-base">EIP-712 Backend Signer Hook</div>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Serverless worker setup to validate state offchain and issue cryptographically signed permits/vouchers directly to user wallets.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-800/60 mt-4 flex items-baseline justify-between mono">
+            <span class="text-xs text-slate-500">Fixed Fee</span>
+            <span class="text-sm font-bold text-white">$350 USDC</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Direct Contact CTA -->
+    <section class="bg-blue-950/20 border border-blue-900/40 rounded-xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+      <div>
+        <h3 class="text-lg font-bold text-white">Need a quick fix before launch?</h3>
+        <p class="text-slate-400 text-sm mt-1">Send your site link and contract address. I'll inspect it and reply within 4 hours.</p>
+      </div>
+      <div class="flex gap-3 shrink-0">
+        <a href="https://x.com/YOUR_HANDLE" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs mono px-4 py-2.5 rounded-lg transition-colors">
+          DM on X ↗
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

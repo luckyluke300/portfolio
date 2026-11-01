@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web3 Frontend & Integration Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen">
+  <div class="max-w-3xl mx-auto px-6 py-16">
+    
+    <!-- Hero Header -->
+    <header class="mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-4">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Available for fast-turnaround web app & crypto wallet tasks
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-3">
+        Full-Stack & Web3 Developer
+      </h1>
+      <p class="text-slate-400 text-lg leading-relaxed mb-5">
+        I build slick web frontends, hook up crypto wallets (Base & Ethereum), and set up secure server automations. Fast delivery. Fixed prices in USDC.
+      </p>
+
+      <!-- Tech Stack Pills -->
+      <div class="flex flex-wrap gap-2 mb-6 text-xs font-mono text-slate-300">
+        <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">React / Vite</span>
+        <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Base & Ethereum</span>
+        <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">WalletConnect / Wagmi</span>
+        <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Cloudflare Workers</span>
+        <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800">Firebase</span>
+      </div>
+      
+      <!-- Top Action Links (X + Direct Discord Copy) -->
+      <div class="flex flex-wrap gap-3 text-sm font-medium">
+        <a href="#offers" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white transition">
+          View Fixed Packages
+        </a>
+        <a href="https://x.com/CashCarlo24" target="_blank" class="px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center gap-2">
+          <span>DM on X</span> ↗
+        </a>
+        <button onclick="copyDiscord(this)" class="px-5 py-2.5 rounded-lg bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 border border-indigo-500/30 transition flex items-center gap-2 font-mono text-xs sm:text-sm">
+          <span>Discord: @luckyluke7057</span>
+          <span class="text-[10px] bg-indigo-500/20 px-1.5 py-0.5 rounded text-indigo-200 copy-badge">Copy</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Flagship Case Study: TapStar -->
+    <section class="mb-14">
+      <h2 class="text-xs uppercase tracking-wider font-semibold text-slate-400 mb-4">Live Proof of Work</h2>
+      <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition">
+        <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+          <h3 class="text-xl font-bold text-white">TapStar Space — Onchain Competition Game</h3>
+          <span class="text-xs px-2.5 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 font-mono">Live on Base</span>
+        </div>
+        <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+          Built and launched a real-money competitive browser game on Base. Handles player pools, secure backend game-result verification, and instant token payouts.
+        </p>
+        <ul class="text-sm text-slate-400 space-y-2 mb-6 list-disc list-inside">
+          <li><strong>Holding & Escrow Contract:</strong> Smart contract that securely holds stakes until a game ends.</li>
+          <li><strong>Tamper-Proof Verification:</strong> Backend verifies the real winner cryptographically before authorizing payouts, preventing cheating.</li>
+          <li><strong>Fast Cloud Backend:</strong> Real-time match sync with zero lag using Cloudflare & Firebase.</li>
+          <li><strong>Clean Mobile UI:</strong> Instant wallet connections and smooth gameplay across both phones and desktop screens.</li>
+        </ul>
+        <div class="flex flex-wrap gap-4 text-xs font-mono">
+          <a href="https://tapstar.space" target="_blank" class="text-blue-400 hover:underline">Launch TapStar App ↗</a>
+          <span class="text-slate-600">•</span>
+          <a href="https://basescan.org/address/0xC96bf9BE7C47624CCdB4104dB4F9DC247b7a52c4" target="_blank" class="text-blue-400 hover:underline">View Verified Contract on Basescan ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fixed-Price Micro Offers with Interactive Modals -->
+    <section id="offers" class="mb-14">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xs uppercase tracking-wider font-semibold text-slate-400">Fixed-Price Packages (Paid in USDC on Base)</h2>
+        <span class="text-xs text-slate-500">Click a card for full deliverables</span>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        
+        <!-- Card 1 -->
+        <div onclick="openModal('modal-mobile')" class="cursor-pointer p-5 rounded-lg bg-slate-900/60 border border-slate-800 hover:border-blue-500/60 hover:bg-slate-900 transition flex flex-col justify-between group">
+          <div>
+            <div class="text-xs font-semibold text-blue-400 uppercase tracking-wide mb-1">Quick Fix</div>
+            <h4 class="font-bold text-white text-base mb-2 group-hover:text-blue-300 transition">Mobile & Wallet Fix</h4>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">Fix wallet connection drops, broken layouts on iPhone/Android, and popup bugs.</p>
+          </div>
+          <div>
+            <div class="text-lg font-bold text-white mb-1">$80 <span class="text-xs text-slate-500 font-normal">USDC</span></div>
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-emerald-400">⚡ 24h Turnaround</span>
+              <span class="text-blue-400 group-hover:underline">View Details →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div onclick="openModal('modal-claim')" class="cursor-pointer p-5 rounded-lg bg-slate-900/60 border border-blue-500/40 bg-blue-500/[0.03] hover:border-blue-400 hover:bg-slate-900 transition flex flex-col justify-between relative group">
+          <div class="absolute -top-2.5 right-3 text-[10px] uppercase font-bold tracking-wider bg-blue-600 text-white px-2 py-0.5 rounded">Most Popular</div>
+          <div>
+            <div class="text-xs font-semibold text-blue-400 uppercase tracking-wide mb-1">Integration</div>
+            <h4 class="font-bold text-white text-base mb-2 group-hover:text-blue-300 transition">Mint / Claim Flow</h4>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">Ready-to-use page connecting your smart contract to user wallets with clean status alerts.</p>
+          </div>
+          <div>
+            <div class="text-lg font-bold text-white mb-1">$180 <span class="text-xs text-slate-500 font-normal">USDC</span></div>
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-emerald-400">⚡ 48h Turnaround</span>
+              <span class="text-blue-400 group-hover:underline">View Details →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div onclick="openModal('modal-bot')" class="cursor-pointer p-5 rounded-lg bg-slate-900/60 border border-slate-800 hover:border-blue-500/60 hover:bg-slate-900 transition flex flex-col justify-between group">
+          <div>
+            <div class="text-xs font-semibold text-blue-400 uppercase tracking-wide mb-1">Backend Automation</div>
+            <h4 class="font-bold text-white text-base mb-2 group-hover:text-blue-300 transition">Discord / Telegram Bot</h4>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">Real-time alerts sent to your community channel whenever tokens are minted, bought, or transferred.</p>
+          </div>
+          <div>
+            <div class="text-lg font-bold text-white mb-1">$250 <span class="text-xs text-slate-500 font-normal">USDC</span></div>
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-emerald-400">⚡ 48h Turnaround</span>
+              <span class="text-blue-400 group-hover:underline">View Details →</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- NEW: How We Work (3-Step Process) -->
+    <section class="mb-14">
+      <h2 class="text-xs uppercase tracking-wider font-semibold text-slate-400 mb-4">How It Works</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+        <div class="p-4 rounded-lg bg-slate-900/40 border border-slate-800/80">
+          <div class="text-blue-400 font-mono font-bold mb-1">01. Scope & Check</div>
+          <p class="text-slate-400 leading-relaxed">Send your link or repo via X or Discord. We confirm the exact fix or feature and lock in the flat price.</p>
+        </div>
+        <div class="p-4 rounded-lg bg-slate-900/40 border border-slate-800/80">
+          <div class="text-blue-400 font-mono font-bold mb-1">02. Kickoff Deposit</div>
+          <p class="text-slate-400 leading-relaxed">50% upfront in USDC on Base. I start building immediately and send a live preview link for testing.</p>
+        </div>
+        <div class="p-4 rounded-lg bg-slate-900/40 border border-slate-800/80">
+          <div class="text-blue-400 font-mono font-bold mb-1">03. Handoff & PR</div>
+          <p class="text-slate-400 leading-relaxed">Once you test the preview and approve, send the remaining 50% and I push the final code or PR immediately.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: Quick FAQ / Trust Box -->
+    <section class="mb-14">
+      <h2 class="text-xs uppercase tracking-wider font-semibold text-slate-400 mb-4">Common Questions</h2>
+      <div class="space-y-3 text-xs">
+        <div class="p-4 rounded-lg bg-slate-900/40 border border-slate-800/80">
+          <h4 class="font-bold text-slate-200 mb-1">Do you ever need private keys or deployer wallet access?</h4>
+          <p class="text-slate-400">Never. I only need your public smart contract address, public ABI, and frontend code. You stay in 100% control of your wallets and ownership keys.</p>
+        </div>
+        <div class="p-4 rounded-lg bg-slate-900/40 border border-slate-800/80">
+          <h4 class="font-bold text-slate-200 mb-1">What if my task doesn't fit these 3 packages?</h4>
+          <p class="text-slate-400">Message me on X or Discord with what you're building. I can quote a custom flat price for dashboards, custom game backends, or API integrations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Direct Contacts & Outreach Team Footer -->
+    <footer class="border-t border-slate-900 pt-8 space-y-6">
+      <div>
+        <h3 class="text-xs uppercase tracking-wider font-semibold text-slate-400 mb-3">Direct Contact & Outreach Team</h3>
+        <p class="text-xs text-slate-500 mb-3">Reach out directly on X or click any Discord handle to copy it:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          
+          <!-- Your Direct Card -->
+          <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800 flex justify-between items-center">
+            <div>
+              <span class="text-white font-semibold block">Lead Developer</span>
+              <button onclick="copyDiscord(this)" class="font-mono text-indigo-400 hover:underline mt-0.5 flex items-center gap-1.5">
+                <span>Discord: @luckyluke7057</span>
+                <span class="text-[10px] bg-indigo-500/20 px-1.5 py-0.2 rounded text-indigo-200 copy-badge">Copy</span>
+              </button>
+            </div>
+            <a href="https://x.com/CashCarlo24" target="_blank" class="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 font-mono transition">
+              X / DM ↗
+            </a>
+          </div>
+
+          <!-- Outreacher Slot (Optional for when you add reps) -->
+          <div class="p-3.5 rounded-lg bg-slate-900/50 border border-slate-800/70 flex justify-between items-center">
+            <div>
+              <span class="text-slate-300 font-medium block">Outreach Rep #1</span>
+              <span class="font-mono text-slate-400 block mt-0.5">Discord: @luckyluke7057</span>
+            </div>
+            <a href="https://x.com/CashCarlo24" target="_blank" class="px-3 py-1.5 rounded bg-slate-800/70 hover:bg-slate-700 text-slate-300 font-mono transition">
+              X / DM ↗
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500 pt-4 border-t border-slate-900/50">
+        <p>Payments accepted in USDC on Base. 50% deposit required prior to kickoff.</p>
+        <div class="flex items-center gap-4 font-mono">
+          <button onclick="copyDiscord(this)" class="text-indigo-400 hover:text-indigo-300 transition">
+            Discord: @luckyluke7057 <span class="copy-badge text-[10px] ml-1">(Copy)</span>
+          </button>
+          <span>•</span>
+          <a href="https://x.com/CashCarlo24" target="_blank" class="text-slate-400 hover:text-white transition">
+            X: @CashCarlo24↗
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- POPUP MODALS -->
+
+  <!-- Modal 1: Mobile & Wallet Fix -->
+  <div id="modal-mobile" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl max-w-lg w-full p-6 relative">
+      <button onclick="closeModal('modal-mobile')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">✕</button>
+      <div class="text-xs font-semibold text-blue-400 uppercase mb-1">Package Breakdown</div>
+      <h3 class="text-xl font-bold text-white mb-2">Mobile & Wallet Fix — $80 USDC</h3>
+      <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+        Designed for founders whose site breaks on mobile browsers or where users keep getting stuck trying to connect their wallet.
+      </p>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">What's Included:</h4>
+      <ul class="text-xs text-slate-300 space-y-2 mb-5 list-disc list-inside">
+        <li><strong>Fix Mobile Viewport:</strong> Fix buttons, navigation bars, or modals getting cropped on iPhone Safari and Android Chrome.</li>
+        <li><strong>Network Auto-Switch:</strong> Automatically prompt the user to switch chains (e.g. to Base) instead of throwing an unhandled error.</li>
+        <li><strong>Disconnect & Reconnect Handling:</strong> Gracefully handle when users cancel or reject signature requests without freezing the UI.</li>
+      </ul>
+      <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-xs text-slate-400 mb-5">
+        <strong>Turnaround:</strong> Within 24 hours of receiving repo access or code files.<br>
+        <strong>Requirements:</strong> Read/write access to your frontend repo or a zip of the source code.
+      </div>
+      <div class="flex flex-wrap justify-end gap-2">
+        <button onclick="closeModal('modal-mobile')" class="px-3 py-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 text-xs">Close</button>
+        <button onclick="copyDiscord(this)" class="px-3 py-2 rounded-lg bg-indigo-600/20 text-indigo-300 border border-indigo-500/30 hover:bg-indigo-600/30 text-xs font-mono">
+          Discord: @luckyluke7057 <span class="copy-badge">(Copy)</span>
+        </button>
+        <a href="https://x.com/CashCarlo24" target="_blank" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-500 text-xs font-semibold">DM on X ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Mint / Claim Flow -->
+  <div id="modal-claim" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl max-w-lg w-full p-6 relative">
+      <button onclick="closeModal('modal-claim')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">✕</button>
+      <div class="text-xs font-semibold text-blue-400 uppercase mb-1">Package Breakdown</div>
+      <h3 class="text-xl font-bold text-white mb-2">Mint / Claim Flow — $180 USDC</h3>
+      <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+        A complete, reliable frontend page allowing your users to connect their wallet, view token/NFT eligibility, and trigger your smart contract's mint or claim function.
+      </p>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">What's Included:</h4>
+      <ul class="text-xs text-slate-300 space-y-2 mb-5 list-disc list-inside">
+        <li><strong>Full Wallet Integration:</strong> Supports MetaMask, Coinbase Wallet, Rainbow, and WalletConnect.</li>
+        <li><strong>Live Contract Reads:</strong> Displays remaining supply, user balance, and cost per mint in real-time.</li>
+        <li><strong>Transaction UX:</strong> Loading spinners, transaction pending notifications, and verified block explorer link upon confirmation.</li>
+        <li><strong>Clean Responsive Design:</strong> Formatted to match your brand colors and typography.</li>
+      </ul>
+      <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-xs text-slate-400 mb-5">
+        <strong>Turnaround:</strong> 48 hours.<br>
+        <strong>Requirements:</strong> Verified smart contract address and contract ABI (or contract source code).
+      </div>
+      <div class="flex flex-wrap justify-end gap-2">
+        <button onclick="closeModal('modal-claim')" class="px-3 py-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 text-xs">Close</button>
+        <button onclick="copyDiscord(this)" class="px-3 py-2 rounded-lg bg-indigo-600/20 text-indigo-300 border border-indigo-500/30 hover:bg-indigo-600/30 text-xs font-mono">
+          Discord: @luckyluke7057 <span class="copy-badge">(Copy)</span>
+        </button>
+        <a href="https://x.com/CashCarlo24" target="_blank" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-500 text-xs font-semibold">DM on X ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Discord / Telegram Bot -->
+  <div id="modal-bot" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl max-w-lg w-full p-6 relative">
+      <button onclick="closeModal('modal-bot')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">✕</button>
+      <div class="text-xs font-semibold text-blue-400 uppercase mb-1">Package Breakdown</div>
+      <h3 class="text-xl font-bold text-white mb-2">Discord / Telegram Notifier Bot — $250 USDC</h3>
+      <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+        Keep your community hyped and informed by broadcasting live contract activity straight into your announcements or community chat.
+      </p>
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">What's Included:</h4>
+      <ul class="text-xs text-slate-300 space-y-2 mb-5 list-disc list-inside">
+        <li><strong>Onchain Event Listener:</strong> Watches your contract 24/7 for specific events (e.g., New Mints, High-Value Stakes, Big Swaps).</li>
+        <li><strong>Formatted Embeds:</strong> Sends attractive visual cards into Discord/Telegram showing buyer address, quantity, and transaction hash.</li>
+        <li><strong>Serverless Hosting:</strong> Deployed on Cloudflare Workers so it runs continuously without running up monthly server bills.</li>
+      </ul>
+      <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-xs text-slate-400 mb-5">
+        <strong>Turnaround:</strong> 48 hours.<br>
+        <strong>Requirements:</strong> Discord Webhook URL (or Telegram bot token) and the target contract address.
+      </div>
+      <div class="flex flex-wrap justify-end gap-2">
+        <button onclick="closeModal('modal-bot')" class="px-3 py-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 text-xs">Close</button>
+        <button onclick="copyDiscord(this)" class="px-3 py-2 rounded-lg bg-indigo-600/20 text-indigo-300 border border-indigo-500/30 hover:bg-indigo-600/30 text-xs font-mono">
+          Discord: @luckyluke7057 <span class="copy-badge">(Copy)</span>
+        </button>
+        <a href="https://x.com/CashCarlo24" target="_blank" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-500 text-xs font-semibold">DM on X ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript for Modals & Discord Copy -->
+  <script>
+    const DISCORD_HANDLE = "luckyluke7057";
+
+    function copyDiscord(btnElement) {
+      navigator.clipboard.writeText(DISCORD_HANDLE);
+      const badge = btnElement.querySelector('.copy-badge');
+      if (badge) {
+        const originalText = badge.innerText;
+        badge.innerText = "Copied! ✓";
+        setTimeout(() => { badge.innerText = originalText; }, 2000);
+      }
+    }
+
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('[id^="modal-"]').forEach(modal => modal.classList.add('hidden'));
+      }
+    });
+  </script>
+</body>
+</html>
